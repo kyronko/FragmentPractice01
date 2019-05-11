@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.tjedit.fragmentpractice01.adapters.PageAdapter;
 import com.tjedit.fragmentpractice01.databinding.ActivityMainBinding;
+import com.tjedit.fragmentpractice01.fragments.FragmentOne;
 import com.tjedit.fragmentpractice01.fragments.FragmentTwo;
 
 public class MainActivity extends BaseActivity {
@@ -106,6 +107,7 @@ public class MainActivity extends BaseActivity {
                 Fragment currentFrag = pageAdapter.getItem(act.viewPager.getCurrentItem());
                 if (act.viewPager.getCurrentItem() == 0) {
 //                currentFrag가 FragmentOne이다!
+                    ((FragmentOne)currentFrag).changeTextMsg(act.testEdt.getText().toString());
                 } else if (act.viewPager.getCurrentItem() == 1) {
 //                currentFrag 가 FragmentTwo!
                 } else if (act.viewPager.getCurrentItem() == 2) {
