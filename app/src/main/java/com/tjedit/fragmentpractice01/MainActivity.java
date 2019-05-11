@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.tjedit.fragmentpractice01.adapters.PageAdapter;
 import com.tjedit.fragmentpractice01.databinding.ActivityMainBinding;
 import com.tjedit.fragmentpractice01.fragments.FragmentTwo;
 
@@ -44,6 +45,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupValues() {
+        PageAdapter pageAdapter = new PageAdapter(getSupportFragmentManager(),3);
+        act.viewPager.setAdapter(pageAdapter);
+
+
 
     }
 
