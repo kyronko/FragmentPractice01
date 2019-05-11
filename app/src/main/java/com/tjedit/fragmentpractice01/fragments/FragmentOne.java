@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.tjedit.fragmentpractice01.MainActivity;
 import com.tjedit.fragmentpractice01.R;
 import com.tjedit.fragmentpractice01.databinding.FragmentOneBinding;
 
@@ -34,6 +35,7 @@ public class FragmentOne extends Fragment {
             public void onClick(View v) {
                 String title = binding.titleEdt.getText().toString();
                 getActivity().setTitle(title);
+                ((MainActivity)getActivity()).setCustomTitle(title);
             }
         });
 

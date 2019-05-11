@@ -125,7 +125,10 @@ public class MainActivity extends BaseActivity {
         pageAdapter = new PageAdapter(getSupportFragmentManager(), 3);
         act.viewPager.setAdapter(pageAdapter);
 
-
+    }
+    public void setCustomTitle(String inputTitle){
+        setTitle(String.format("입력값 : %s", inputTitle));
+        act.testEdt.setText(inputTitle);
     }
 
     @Override
