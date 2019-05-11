@@ -8,27 +8,22 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.tjedit.fragmentpractice01.R;
-import com.tjedit.fragmentpractice01.databinding.FragmentOneBinding;
+import com.tjedit.fragmentpractice01.databinding.FragmentThreeBinding;
 
-public class FragmentOne extends Fragment {
-    FragmentOneBinding binding;
-
+public class FragmentThree extends Fragment {
+   FragmentThreeBinding binding;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-          binding = DataBindingUtil.inflate(inflater,R.layout.fragment_one, container,false);
-
-          return  binding.getRoot();
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_three,container,false);
+        return binding.getRoot();
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        binding.myTextView.setText("데이터 바인딩 이용");
-
+        binding.tempTxt.setText("세번째데이터바인딩");
     }
 }
