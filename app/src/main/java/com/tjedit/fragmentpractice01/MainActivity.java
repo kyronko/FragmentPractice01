@@ -74,12 +74,12 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onPageSelected(int i) {
-                if ( i == 0){
+                if (i == 0) {
                     act.changeFragOneBtn.setText("현재 선택됨");
                     act.changeFragTwoBtn.setText("2번 플래그먼트");
                     act.changeFragThreeBtn.setText("3번 플래그먼트");
                 }
-                if(i==1){
+                if (i == 1) {
                     act.changeFragOneBtn.setText("1번 플래그먼트");
                     act.changeFragTwoBtn.setText("현재 선택됨");
                     act.changeFragThreeBtn.setText("3번 플래그먼트");
@@ -103,7 +103,14 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
 //                지금 보여지고 있는 Fragment에 접근 - > 현재 작성중인 MainActivity에서?
 //                2. 접근한 Fragment에게 어떻게 작업을 시킬건지?
+                Fragment currentFrag = pageAdapter.getItem(act.viewPager.getCurrentItem());
+                if (act.viewPager.getCurrentItem() == 0) {
+//                currentFrag가 FragmentOne이다!
+                } else if (act.viewPager.getCurrentItem() == 1) {
+//                currentFrag 가 FragmentTwo!
+                } else if (act.viewPager.getCurrentItem() == 2) {
 
+                }
             }
         });
 
@@ -113,9 +120,8 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupValues() {
         act.viewPager.setOffscreenPageLimit(3);//프래그먼의 갯수와 맞춰주자
-        pageAdapter = new PageAdapter(getSupportFragmentManager(),3);
+        pageAdapter = new PageAdapter(getSupportFragmentManager(), 3);
         act.viewPager.setAdapter(pageAdapter);
-
 
 
     }
@@ -123,6 +129,6 @@ public class MainActivity extends BaseActivity {
     @Override
     public void bindViews() {
 
-            act = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        act = DataBindingUtil.setContentView(this, R.layout.activity_main);
     }
 }
