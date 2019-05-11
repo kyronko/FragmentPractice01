@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:orientation="vertical">
-        <ScrollView
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/changeFragOneBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <fragment
-                    android:id="@+id/fragOne"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    class="com.tjedit.fragmentpractice01.fragments.FragmentOne"
-                    />
-                <fragment
-                    android:id="@+id/fragTwo"
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    class="com.tjedit.fragmentpractice01.fragments.FragmentTwo"
-                    />
-                <fragment
-                    android:id="@+id/fragThree"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    class="com.tjedit.fragmentpractice01.fragments.FragmentThree"
-                    />
-
-            </LinearLayout>
-        </ScrollView>
+                android:text="1번 프래그먼트" />
+            <Button
+                android:id="@+id/changeFragTwoBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="2번 프래그먼트" />
+            <Button
+                android:id="@+id/changeFragThreeBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="3번 프래그먼트" />
+        </LinearLayout>
 
 
-
+        <fragment
+            android:id="@+id/fragOne"
+            class="com.tjedit.fragmentpractice01.fragments.FragmentOne"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
     </LinearLayout>
