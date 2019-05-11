@@ -26,17 +26,31 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
+        act.changeFragOneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.viewPager.setCurrentItem(0);
+            }
+        });
         act.changeFragTwoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Fragment fr = new FragmentTwo();
+//                Fragment fr = new FragmentTwo();
+//
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.fragOne,fr);
+//                fragmentTransaction.commit();
+//                2번 화면 버튼을 누름 = > 2번째 페이지를 보여주자.
+                act.viewPager.setCurrentItem(1);
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragOne,fr);
-                fragmentTransaction.commit();
-
+            }
+        });
+        act.changeFragThreeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                act.viewPager.setCurrentItem(2);
             }
         });
 
