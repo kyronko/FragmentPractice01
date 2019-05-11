@@ -8,8 +8,18 @@
         tools:context=".MainActivity"
         android:orientation="vertical">
 
-
-
+        <fragment
+            android:id="@+id/fragOne"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            class="com.tjedit.fragmentpractice01.fragments.FragmentOne"
+            />
+        <fragment
+            android:id="@+id/fragTwo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            class="com.tjedit.fragmentpractice01.fragments.FragmentTwo"
+            />
 
 
     </LinearLayout>
