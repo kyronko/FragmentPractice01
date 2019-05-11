@@ -97,6 +97,14 @@ public class MainActivity extends BaseActivity {
 
             }
         });
+        act.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                지금 보여지고 있는 Fragment에 접근 - > 현재 작성중인 MainActivity에서?
+//                2. 접근한 Fragment에게 어떻게 작업을 시킬건지?
+
+            }
+        });
 
 
     }

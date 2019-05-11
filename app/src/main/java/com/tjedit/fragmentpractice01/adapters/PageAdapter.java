@@ -10,6 +10,7 @@ import com.tjedit.fragmentpractice01.fragments.FragmentTwo;
 
 public class PageAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;
+    Fragment frag1, frag2, frag3;
 
     public PageAdapter(FragmentManager fm, int numOfTabs) {
         super(fm);
@@ -20,15 +21,22 @@ public class PageAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         Fragment fr = null;
         if (position == 0) {
-            FragmentOne frag1 = new FragmentOne();
+            if (frag1 == null) {
+                frag1 = new FragmentOne();
+            }
             fr = frag1;
-        }
-        else if (position ==1){
-            FragmentTwo frag2 = new FragmentTwo();
+        } else if (position == 1) {
+            if (frag2 == null) {
+                frag2 = new FragmentTwo();
+            }
+
             fr = frag2;
-        }
-        else if (position ==2){
-            FragmentThree frag3 = new FragmentThree();
+        } else if (position == 2) {
+            if (frag3 == null) {
+                frag3 = new FragmentThree();
+
+            }
+
             fr = frag3;
         }
         return fr;
