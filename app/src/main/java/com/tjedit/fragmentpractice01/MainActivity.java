@@ -103,6 +103,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupValues() {
+        act.viewPager.setOffscreenPageLimit(3);//프래그먼의 갯수와 맞춰주자
         PageAdapter pageAdapter = new PageAdapter(getSupportFragmentManager(),3);
         act.viewPager.setAdapter(pageAdapter);
 
